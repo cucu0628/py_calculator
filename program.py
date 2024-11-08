@@ -3,6 +3,8 @@ from tkinter import *
 
 #változó létrehozása és dekralálás
 kifejez = "" 
+elozoeredmeny=""
+
 
 
 # frisíti a beírt müveletett
@@ -24,14 +26,19 @@ def equalpress():
 	try: 
 
 		global kifejez 
+		global elozoeredmeny
 
 		#kiszámolja, eval átalakítja műveleté 
 		total = str(eval(kifejez)) 
 
-		egyenloseg.set(total) 
+		egyenloseg.set(total)
+		
+        #előző eredmény elmentése
+		elozoeredmeny=str(total)
+		
 
 		#újra üres lesz a müvelet
-		kifejez = "" 
+		kifejez = ""
 
 	#ha valami nem münködne vagy rossz müveletett írt be
 	except: 
@@ -134,7 +141,7 @@ divide.grid(row=5, column=3)
 
 equal = Button(root, text=' = ', fg='black', bg='gray', 
 				command=equalpress, height=3, width=7) 
-equal.grid(row=5, column=2) 
+equal.grid(row=6, column=3) 
 
 clear = Button(root, text='Clear', fg='black', bg='gray', 
 				command=clear, height=3, width=7) 
@@ -143,6 +150,9 @@ clear.grid(row=5, column='1')
 Decimal= Button(root, text='.', fg='black', bg='gray', 
 					command=lambda: press('.'), height=3, width=7) 
 Decimal.grid(row=6, column=0) 
+ans= Button(root, text='Ans', fg='black', bg='gray', 
+					command=lambda: press(elozoeredmeny), height=3, width=7) 
+ans.grid(row=5, column=2) 
 	#loop/folyamatos ismétlődés
 
 root.mainloop() 
