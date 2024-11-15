@@ -127,7 +127,7 @@ button9.grid(row=4, column=2)
 
 button0 = Button(root, text=' 0 ', fg='black', bg='gray', 
 					command=lambda: press(0), height=3, width=7) 
-button0.grid(row=5, column=0) 
+button0.grid(row=5, column=1) 
 
 plus = Button(root, text=' + ', fg='black', bg='gray', 
 				command=lambda: press("+"), height=3, width=7) 
@@ -151,15 +151,15 @@ equal.grid(row=7, column=1, columnspan=2)
 
 clear = Button(root, text='Clear', fg='black', bg='gray', 
 				command=clear, height=3, width=7) 
-clear.grid(row=5, column='1') 
+clear.grid(row=6, column=0) 
 
 Decimal= Button(root, text='.', fg='black', bg='gray', 
 					command=lambda: press('.'), height=3, width=7) 
-Decimal.grid(row=6, column=0) 
+Decimal.grid(row=5, column=2) 
 
 ans= Button(root, text='Ans', fg='black', bg='gray', 
 					command=lambda: press(elozoeredmeny), height=3, width=7) 
-ans.grid(row=5, column=2) 
+ans.grid(row=7, column=3) 
 	#loop/folyamatos ismétlődés
 
 log= Button(root, text='log', fg='black', bg='gray', 
@@ -167,7 +167,7 @@ log= Button(root, text='log', fg='black', bg='gray',
 log.grid(row=6, column=1) 
 rod= Button(root, text=',', fg='black', bg='gray', 
 					command=lambda: press(','), height=3, width=7) 
-rod.grid(row=7, column=3) 
+rod.grid(row=5, column=0) 
 open2= Button(root, text='(', fg='black', bg='gray', 
 					command=lambda: press('('), height=3, width=7) 
 open2.grid(row=6, column=2) 
