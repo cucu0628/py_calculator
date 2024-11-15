@@ -75,7 +75,7 @@ root.geometry("250x350")
 egyenloseg = StringVar() 
 
 	#ide lehet beírni a számokat
-kifejez_field = Entry(root, textvariable=egyenloseg,bg='black',fg='green',font=font) 
+kifejez_field = Entry(root, textvariable=egyenloseg,bg='black',fg='white',font=font) 
 
 	#hol legyen a beviteli mező 
 kifejez_field.grid(columnspan=4,pady=8 )
