@@ -146,8 +146,8 @@ divide = Button(root, text=' / ', fg='black', bg='gray',
 divide.grid(row=5, column=3) 
 
 equal = Button(root, text=' = ', fg='black', bg='gray', 
-				command=equalpress, height=3, width=24) 
-equal.grid(row=7, column=1, columnspan=3) 
+				command=equalpress, height=3, width=16) 
+equal.grid(row=7, column=1, columnspan=2) 
 
 clear = Button(root, text='Clear', fg='black', bg='gray', 
 				command=clear, height=3, width=7) 
@@ -167,10 +167,13 @@ log= Button(root, text='log', fg='black', bg='gray',
 log.grid(row=6, column=1) 
 rod= Button(root, text=',', fg='black', bg='gray', 
 					command=lambda: press(','), height=3, width=7) 
-rod.grid(row=6, column=3) 
+rod.grid(row=7, column=3) 
+open2= Button(root, text='(', fg='black', bg='gray', 
+					command=lambda: press('('), height=3, width=7) 
+open2.grid(row=6, column=2) 
 close= Button(root, text=')', fg='black', bg='gray', 
 					command=lambda: press(')'), height=3, width=7) 
-close.grid(row=6, column=2) 
+close.grid(row=6, column=3) 
 delet= Button(root, text='Del', fg='black', bg='gray', 
 					command=delete, height=3, width=7) 
 delet.grid(row=7, column=0) 
