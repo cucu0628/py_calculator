@@ -81,7 +81,7 @@ root.geometry("250x380")
 egyenloseg = StringVar() 
 
 	#ide lehet beírni a számokat
-kifejez_field = Entry(root, textvariable=egyenloseg,bg='black',fg='green',font=font) 
+kifejez_field = Entry(root, textvariable=egyenloseg,bg='black',fg='white',font=font) 
 
 	#hol legyen a beviteli mező 
 kifejez_field.grid(columnspan=4,pady=8 )
@@ -146,8 +146,8 @@ divide = Button(root, text=' / ', fg='black', bg='gray',
 divide.grid(row=5, column=3) 
 
 equal = Button(root, text=' = ', fg='black', bg='gray', 
-				command=equalpress, height=3, width=7) 
-equal.grid(row=6, column=2) 
+				command=equalpress, height=3, width=24) 
+equal.grid(row=7, column=1, columnspan=3) 
 
 clear = Button(root, text='Clear', fg='black', bg='gray', 
 				command=clear, height=3, width=7) 
@@ -164,16 +164,16 @@ ans.grid(row=5, column=2)
 
 log= Button(root, text='log', fg='black', bg='gray', 
 					command=lambda: press('math.log('), height=3, width=7) 
-log.grid(row=7, column=1) 
+log.grid(row=6, column=1) 
 rod= Button(root, text=',', fg='black', bg='gray', 
 					command=lambda: press(','), height=3, width=7) 
 rod.grid(row=6, column=3) 
 close= Button(root, text=')', fg='black', bg='gray', 
 					command=lambda: press(')'), height=3, width=7) 
-close.grid(row=7, column=2) 
+close.grid(row=6, column=2) 
 delet= Button(root, text='Del', fg='black', bg='gray', 
 					command=delete, height=3, width=7) 
-delet.grid(row=6, column=1) 
+delet.grid(row=7, column=0) 
 	#loop/folyamatos ismétlődés
 
 root.mainloop() 
