@@ -1,5 +1,6 @@
 #tkinter meghívása
 from tkinter import *
+import math
 
 #változó létrehozása és dekralálás
 kifejez = "" 
@@ -53,6 +54,11 @@ def clear():
 	kifejez = "" 
 	egyenloseg.set("") 
 
+def delete():
+	global egyenloseg
+	global kifejez
+	kifejez = kifejez[:-1]
+	egyenloseg.set(kifejez)
 
 #fő kód
 
@@ -69,13 +75,13 @@ root.configure(background="black")
 root.title("Számoló gép") 
 
 	# ablak mérete 
-root.geometry("250x350") 
+root.geometry("250x380") 
 
 	#egy változó lesz amit beírunk, bármikor le lehet kérni
 egyenloseg = StringVar() 
 
 	#ide lehet beírni a számokat
-kifejez_field = Entry(root, textvariable=egyenloseg,bg='black',fg='white',font=font) 
+kifejez_field = Entry(root, textvariable=egyenloseg,bg='black',fg='green',font=font) 
 
 	#hol legyen a beviteli mező 
 kifejez_field.grid(columnspan=4,pady=8 )
@@ -141,7 +147,7 @@ divide.grid(row=5, column=3)
 
 equal = Button(root, text=' = ', fg='black', bg='gray', 
 				command=equalpress, height=3, width=7) 
-equal.grid(row=6, column=3) 
+equal.grid(row=6, column=2) 
 
 clear = Button(root, text='Clear', fg='black', bg='gray', 
 				command=clear, height=3, width=7) 
@@ -150,9 +156,24 @@ clear.grid(row=5, column='1')
 Decimal= Button(root, text='.', fg='black', bg='gray', 
 					command=lambda: press('.'), height=3, width=7) 
 Decimal.grid(row=6, column=0) 
+
 ans= Button(root, text='Ans', fg='black', bg='gray', 
 					command=lambda: press(elozoeredmeny), height=3, width=7) 
 ans.grid(row=5, column=2) 
+	#loop/folyamatos ismétlődés
+
+log= Button(root, text='log', fg='black', bg='gray', 
+					command=lambda: press('math.log('), height=3, width=7) 
+log.grid(row=7, column=1) 
+rod= Button(root, text=',', fg='black', bg='gray', 
+					command=lambda: press(','), height=3, width=7) 
+rod.grid(row=6, column=3) 
+close= Button(root, text=')', fg='black', bg='gray', 
+					command=lambda: press(')'), height=3, width=7) 
+close.grid(row=7, column=2) 
+delet= Button(root, text='Del', fg='black', bg='gray', 
+					command=delete, height=3, width=7) 
+delet.grid(row=6, column=1) 
 	#loop/folyamatos ismétlődés
 
 root.mainloop() 
