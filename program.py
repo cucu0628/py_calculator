@@ -147,7 +147,7 @@ divide.grid(row=5, column=3)
 
 equal = Button(root, text=' = ', fg='black', bg='gray', 
 				command=equalpress, height=3, width=16) 
-equal.grid(row=7, column=1, columnspan=2) 
+equal.grid(row=7, column=2, columnspan=2) 
 
 clear = Button(root, text='Clear', fg='black', bg='gray', 
 				command=clear, height=3, width=7) 
@@ -159,7 +159,7 @@ Decimal.grid(row=5, column=2)
 
 ans= Button(root, text='Ans', fg='black', bg='gray', 
 					command=lambda: press(elozoeredmeny), height=3, width=7) 
-ans.grid(row=7, column=3) 
+ans.grid(row=7, column=1) 
 	#loop/folyamatos ismétlődés
 
 log= Button(root, text='log', fg='black', bg='gray', 
